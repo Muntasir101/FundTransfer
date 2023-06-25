@@ -1,0 +1,26 @@
+Project: Fund Transfer Application
+
+Allow users to transfer funds between their accounts within the same bank.
+
+Implement different transaction types with varying fees:
+	a. Standard transfer: $2 fee per transaction.
+	b. Express transfer: $5 fee per transaction.
+	c. International transfer: $10 fee per transaction.
+	
+Apply additional fees for expedited transfers based on the transfer amount:
+	a. For standard transfers:
+		i. No additional fee for transfers below $1,000.
+		ii. 1% fee for transfers of $1,000 or more.
+	b. For express transfers:
+		i. 2% fee for transfers below $1,000.
+		ii. 3% fee for transfers of $1,000 or more.
+	c. No additional fees for international transfers.
+	
+Implement transfer limits based on user account type:
+	a. Standard account: Maximum transfer limit of $5,000 per transaction.
+	b. Premium account: Maximum transfer limit of $10,000 per transaction.
+	
+Include transaction history tracking to provide users with a record of their fund transfers.
+Ensure transaction security by implementing appropriate encryption and authentication measures.
+Provide error handling and notifications for failed transactions or insufficient funds.
+Implement user-friendly interfaces for easy fund transfer initiation and account selection.

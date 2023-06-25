@@ -1,0 +1,42 @@
+<!DOCTYPE html>
+<html>
+<head>
+    <title>Fund Transfer</title>
+    <link rel="stylesheet" href="https://stackpath.bootstrapcdn.com/bootstrap/4.5.2/css/bootstrap.min.css">
+</head>
+<body>
+    <div class="container">
+        <h1 class="mt-5 mb-4">Fund Transfer</h1>
+
+        <form action="/transfer" method="POST">
+
+            <div class="form-group">
+                <label for="account_type">Account:</label>
+                <select name="account_type" id="account_type" class="form-control" required>
+                    <option value="savings">Current</option>
+                    <option value="current">Savings</option>
+                </select>
+            </div>
+                        <div class="form-group">
+                <label for="transfer_type">Transfer Type:</label>
+                <select name="transfer_type" id="transfer_type" class="form-control" required>
+                    <option value="standard">Standard Transfer</option>
+                    <option value="express">Express Transfer</option>
+                    <option value="international">International Transfer</option>
+                </select>
+            </div>
+
+            <div class="form-group">
+                <label for="transfer_amount">Transfer Amount:</label>
+                <input type="number" name="transfer_amount" id="transfer_amount" class="form-control" min="1" required>
+            </div>
+
+            <button type="submit" class="btn btn-primary">Transfer</button>
+        </form>
+    </div>
+
+    <script src="https://code.jquery.com/jquery-3.5.1.slim.min.js"></script>
+    <script src="https://cdn.jsdelivr.net/npm/@popperjs/core@2.5.4/dist/umd/popper.min.js"></script>
+    <script src="https://stackpath.bootstrapcdn.com/bootstrap/4.5.2/js/bootstrap.min.js"></script>
+</body>
+</html>
