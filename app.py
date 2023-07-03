@@ -21,6 +21,8 @@ def transfer():
             fee += transfer_amount * 0.01
     elif transfer_type == 'express':
         fee = 5
+        if transfer_amount < 1000:
+            fee += transfer_amount * 0.02
         if transfer_amount >= 1000:
             fee += transfer_amount * 0.03
     elif transfer_type == 'international':
@@ -36,7 +38,7 @@ def transfer():
     # Validate transfer amount against transfer limit
     if transfer_amount > transfer_limit:
         #return render_template('result.html', error='Transfer amount exceeds transfer limit.')
-        return render_template('result.html')
+        return render_template('error.html')
 
     # Calculate total amount
     total_amount = transfer_amount + fee
